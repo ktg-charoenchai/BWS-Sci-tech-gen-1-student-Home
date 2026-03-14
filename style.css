@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FFD1DC;
+}
+.container{
+    max-width: 1140px;
+    margin:0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    max-width: 100%;
+    width:100px;
+    justify-content: right;
+    display:inline-block;
+    cursor:pointer;	
+    right:0rem;
+    padding:0;
+    position: absolute;
+}
+
+img{
+    transition: 0.3s ease;
+}
+img:hover{
+    cursor:pointer;
+}
+
+img:active{
+    transform: scale(0.8);
+}
+
+.slide{
+    position:absolute;
+    width: 150px;
+    height:100%;
+    background: rgba(121, 41, 60, 0.7);
+    z-index:1;
+    transition: 0.5s ease;
+    transform: translateX(-150px);
+}
+
+.slide ul{
+    margin-top:6rem;
+}
+.slide ul li{
+    border-top: 3px solid white;
+
+}
+
+.slide ul li:hover {
+    list-style:none;
+    background-color:rgba(121, 41, 60,1);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.slide a{
+    list-style: none;
+    text-decoration: none;
+    color:white;
+    font-family: 'Poppins' , sans-serif;
+    font-weight: 500;
+    font-size:1.2rem;
+    padding: 30px 30px;
+    display: block;
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+    font-family: monospace;
+}
+
+
+input{
+    display:none;
+    visibility: hidden;
+    -webkit-appearance: none;
+}
+
+.toggle{
+    position:absolute;
+    height:40px;
+    width:40px;
+    top:20px;
+    left:15px;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color:#fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.toggle .common{
+    position: absolute;
+    height:4px;
+    width:30px;
+    background-color: rgba(121, 41, 60, 0.8);
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line{
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.toggle .middle_line{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.toggle .bottom_line{
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+input:checked ~ .toggle .top_line{
+    left:0px;
+    top:18px;
+    width:40px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .middle_line{
+    opacity:0;
+}
+
+input:checked ~ .toggle .bottom_line{
+    left:0px;
+    top:18px;
+    width:40px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .slide{
+    transform: translateX(0) ;
+    box-shadow: 0 0 25px rgba(121, 41, 60,1);
+}
+
+nav{
+    background-color: rgb(255, 173, 192);
+}
+
+
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    height:60px;
+    font-family: cursive;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-wrapper .guide img{
+    max-width: 100%;
+    width:100px;
+    margin-top:1rem ;
+    z-index:2;
+}
+
+.menuNo{
+    display: flex;
+    list-style: none;
+}
+
+.menuNo li{
+    margin-left: 20px;
+}
+
+.menuNo li a{
+    font-weight:170;
+    font-size: 20px;
+    text-decoration: none;
+    color:#c70e0e;
+}
+
+
+section{
+    display:flex;
+    margin-top:10vh;
+	align-items: center;
+  	justify-content: center;
+    max-width:100%;
+}
+    
+section .container{
+    background-color: white;
+    box-shadow: 5px 3px 6px 5px #999999;
+    border-radius: 25px;
+    margin: 2rem;
+    max-width: 100%;
+}
+
+.section-info{
+    text-align: center;
+    width: 100%;
+    font-family: cursive;
+}
+
+.section-info img{
+    padding:20px;
+    max-width: 100%;
+    width:300px;
+}
+
+.section-info h3{
+    padding:10px 20px;
+}
+
+main{
+    margin:20px;
+    text-align: center;
+}
+
+main a{
+    padding:10px;
+    width:150px;
+    text-decoration: none;
+    color:white;
+    background-color: #c70e0e;
+    border:2px solid #c70e0e;
+    border-radius: 40px;
+    font-family: monospace;
+}
+
+main a:hover{
+    border: 2px solid #c70e0e;
+    background-color: white;
+    color:#c70e0e;
+}
+
+@media only screen and  (min-device-width: 320px) and (max-device-width:932px){
+    .nav-wrapper{
+        display: none;
+    }
+}
+
+@media only screen and  (min-device-width: 932px){
+    header,label,.slide{
+        display:none;
+    }
+}
