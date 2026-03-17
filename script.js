@@ -4,7 +4,7 @@ function changeImage(){
 	if(displayImage.src.match('./red_book.png')){
 		displayImage.src = './open_red_book.png'
 	} else {
-		displayImage.src = './green_red.png'
+		displayImage.src = './red_book.png'
 	}
 
 	count = count + 1;
