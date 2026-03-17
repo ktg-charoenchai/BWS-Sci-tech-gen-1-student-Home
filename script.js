@@ -1,10 +1,10 @@
 var count = 0;
 function changeImage(){
 	let displayImage = document.getElementById('ImageL')
-	if(displayImage.src.match('./green_book.png')){
-		displayImage.src = './open_green_book.png'
+	if(displayImage.src.match('./red_book.png')){
+		displayImage.src = './open_red_book.png'
 	} else {
-		displayImage.src = './green_book.png'
+		displayImage.src = './green_red.png'
 	}
 
 	count = count + 1;
@@ -73,10 +73,10 @@ function changeImage(){
 
 function changeImageM(){
 	let displayImage = document.getElementById('ImageM')
-	if(displayImage.src.match('./green_book.png')){
-		displayImage.src = './open_green_book.png'
+	if(displayImage.src.match('./red_book.png')){
+		displayImage.src = './open_red_book.png'
 	} else {
-		displayImage.src = './green_book.png'
+		displayImage.src = './red_book.png'
 	}
 
 	count = count + 1;
